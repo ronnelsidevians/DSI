@@ -8171,22 +8171,24 @@ setTimeout(boot,300);setTimeout(boot,1200);setInterval(boot,1800);
     display:flex!important;align-items:center!important;
     justify-content:center!important;visibility:visible!important
   }
-  /* Fallback емоджі за позицією — відповідають реальному HELP масиву v61 */
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(1)::before{content:'🏠'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(2)::before{content:'🔍'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(3)::before{content:'📋'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(4)::before{content:'⏱️'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(5)::before{content:'⚠️'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(6)::before{content:'🧭'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(7)::before{content:'📊'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(8)::before{content:'⚙️'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(9)::before{content:'🎨'!important}
-  #dsiHelpModal .dsi-help-nav-btn:nth-of-type(10)::before{content:'💾'!important}
-  #dsiHelpModal .dsi-help-nav-btn.active{
-    background:var(--primary-dim)!important;
-    border-color:var(--primary)!important;
-    color:var(--primary)!important
-  }
+ /* Fallback емоджі за позицією — відповідають реальному HELP масиву v61 */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(1)::before{content:'🏠'!important}  /* Огляд */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(2)::before{content:'🔍'!important}  /* Пошук */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(3)::before{content:'📋'!important}  /* Опис SM */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(4)::before{content:'⏱️'!important} /* SLA */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(5)::before{content:'⚠️'!important}  /* Аварії */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(6)::before{content:'🩺'!important}  /* Діагностика */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(7)::before{content:'📊'!important}  /* Аналіз */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(8)::before{content:'🤖'!important}  /* ШІ */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(9)::before{content:'⚙️'!important}  /* Налаштування */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(10)::before{content:'🎨'!important} /* Теми */
+#dsiHelpModal .dsi-help-nav-btn:nth-of-type(11)::before{content:'💾'!important} /* Збереження */
+
+#dsiHelpModal .dsi-help-nav-btn.active{
+  background:var(--primary-dim)!important;
+  border-color:var(--primary)!important;
+  color:var(--primary)!important;
+}
   #dsiHelpModal .dsi-help-content{
     flex:1 1 auto!important;width:auto!important;height:100%!important;
     max-height:none!important;overflow:auto!important;
