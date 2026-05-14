@@ -1,13 +1,13 @@
-const CACHE_NAME = 'dsi-v3-cache';
+const CACHE_NAME = 'dsi-v1-cache';
 // Тут перерахуйте всі ваші файли, які треба зберегти
 const urlsToCache = [
   './index.html',
   './manifest.json',
-  './data1.json',
-  './data2.json',
-  './data3.json',
-  './data4.json',
-  './data5.json',
+  './DSI_alarms.json',
+  './DSI_algorithm.json',
+  './DSI_sm_templates.json',
+  './DSI_synonyms.json',
+  './DSI_system.json',
   './icon.png'
 ];
 
