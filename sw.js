@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dsi-v3-cache'; // Змінюйте цифру щоразу, коли щось міняєте в коді!
+const CACHE_NAME = 'dsi-v22-cache'; // Змінюйте цифру щоразу, коли щось міняєте в коді!
 
 const urlsToCache = [
   './',
