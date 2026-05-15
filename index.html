@@ -212,12 +212,15 @@ body{background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;t
   box-shadow:0 0 14px color-mix(in srgb,var(--card-accent,var(--primary)) 25%,transparent)}
 @keyframes cometOrbit{from{stroke-dashoffset:var(--perim,1000)}to{stroke-dashoffset:0}}
 .comet-svg{position:absolute;inset:0;width:100%;height:100%;
-  pointer-events:none;overflow:visible;border-radius:8px;z-index:2}
+  pointer-events:none;overflow:visible;border-radius:8px;z-index:2;
+  will-change:transform;transform:translateZ(0);backface-visibility:hidden}
 .comet-path{fill:none;stroke-width:3;stroke-linecap:round;
   stroke-dasharray:40 var(--co-len,800);
-  animation:cometOrbit 3.5s cubic-bezier(0.4,0,0.6,1) infinite;
+  animation:cometOrbit 5s linear infinite;
+  will-change:stroke-dashoffset;
   filter:drop-shadow(0 0 4px currentColor)}
 @media(max-width:980px){.comet-svg{display:none!important}}
+@media(prefers-reduced-motion:reduce){.comet-path{animation:none!important}}
 
 .card-header{padding:18px 22px 14px 26px;display:flex;align-items:center;gap:14px;
   border-bottom:1px solid var(--border)}
@@ -1660,15 +1663,7 @@ X обов’язкова. Без Y — кількість по X. З Y — тр
 </div>
 </div>
 </div>
-<!-- AI PAGE -->
-<div class="page" id="page-ai" style="display: none;">
-<div class="page-inner">
-<div class="page-header">
-<h2 data-se="1" data-dsi-title-backup="Двічі клік — редагувати (Supereditor)" aria-label="Двічі клік — редагувати (Supereditor)">🤖 ШІ</h2>
-<p data-se="1" data-dsi-title-backup="Двічі клік — редагувати (Supereditor)" aria-label="Двічі клік — редагувати (Supereditor)">ШІ-асистент тимчасово недоступний</p>
-</div>
-</div>
-</div>
+<!-- AI PAGE removed (dead splash) -->
 <!-- Diagnostics JSON Editor Modal -->
 <div class="modal-ov" id="diagJsonEditorModal" style="z-index:2100">
 <div class="modal-box" style="max-width:920px;height:82vh;display:flex;flex-direction:column">
@@ -2526,7 +2521,7 @@ function attachComet(card){
     rect.setAttribute('stroke',color);rect.setAttribute('stroke-width','2.5');
     rect.setAttribute('stroke-linecap','round');
     rect.style.strokeDasharray='28 '+(perim-28);
-    rect.style.animation='cometOrbit 3.8s cubic-bezier(0.45,0,0.55,1) infinite';
+    rect.style.animation='cometOrbit 5s linear infinite';rect.style.willChange='stroke-dashoffset';
     rect.style.setProperty('--perim',perim);
     rect.style.filter='drop-shadow(0 0 5px '+color+')';
     svg.appendChild(rect); card.appendChild(svg);
@@ -2555,7 +2550,7 @@ function attachAlarmComet(el){
     rect.setAttribute('stroke',color);rect.setAttribute('stroke-width','2.5');
     rect.setAttribute('stroke-linecap','round');
     rect.style.strokeDasharray='28 '+(perim-28);
-    rect.style.animation='cometOrbit 3.8s cubic-bezier(0.45,0,0.55,1) infinite';
+    rect.style.animation='cometOrbit 5s linear infinite';rect.style.willChange='stroke-dashoffset';
     rect.style.setProperty('--perim',perim);
     rect.style.filter='drop-shadow(0 0 5px '+color+')';
     svg.appendChild(rect); el.appendChild(svg);
