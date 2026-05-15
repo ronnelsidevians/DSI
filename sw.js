@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dsi-v1.1-cache';
+const CACHE_NAME = 'dsi-v99-cache';
 // Тут перерахуйте всі ваші файли, які треба зберегти
 const urlsToCache = [
   './index.html',
